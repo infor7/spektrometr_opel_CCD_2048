@@ -11,8 +11,10 @@ data_max = max(data)
 print(data_max)
 print(data.index(data_max))
 tmp = np.linspace(200, 700, 2048)
+
 wave_lenghts = []
 wave_lenghts = tmp.tolist()
+# 400nm indx = print(wave_lenghts[819])
 
 light_temperature = []
 
