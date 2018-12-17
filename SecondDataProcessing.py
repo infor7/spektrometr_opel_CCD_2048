@@ -32,7 +32,7 @@ fun_z = []
 
 # color matching functions
 for i in range(len(visible_wave_length_intensity)):
-    percent_wave_length_intensity.append(visible_wave_length_intensity[i]/16383)
+    percent_wave_length_intensity.append(visible_wave_length_intensity[i]/data_max)
     fun_x.append(1.065 * np.exp((-1/2) * ((visible_wave_length[i]-595.8)/33.33) ** 2) + 0.366 * np.exp((-1/2) * ((visible_wave_length[i] - 446.8)/19.44) ** 2))
     fun_y.append(1.014 * np.exp((-1/2) * ((np.log(visible_wave_length[i]) - np.log(556.3))/0.075) ** 2))
     fun_z.append(1.839 * np.exp((-1/2) * ((np.log(visible_wave_length[i]) - np.log(449.3))/0.051) ** 2))
@@ -70,8 +70,8 @@ cct = 449 * n ** 3 + 3525 * n ** 2 - 6823.3 * n + 5520.33
 
 print("\nColor temperature:", cct)
 
-plt.plot(wave_lenghts, data)
+plt.plot(visible_wave_length, visible_wave_length_intensity)
 plt.show()
 
-plt.plot(visible_wave_length, percent_wave_length_intensity, '.')
-plt.show()
+#plt.plot(visible_wave_length, percent_wave_length_intensity, '.')
+#plt.show()

@@ -22,5 +22,5 @@ for i in range(len(wave_lenghts)):
     light_temperature.append(2897768.5/wave_lenghts[i])
 
 print(wave_lenghts[data.index(data_max)])
-print(light_temperature[data.index(data_max)])
+print("Temperature: ", light_temperature[data.index(data_max)])
 # print(light_temperature)
