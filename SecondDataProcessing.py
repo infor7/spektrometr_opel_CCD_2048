@@ -21,6 +21,7 @@ wave_lenghts = tmp.tolist()
 visible_wave_length = wave_lenghts[819:]
 visible_wave_length_intensity_all = data[819:]
 percent_wave_length_intensity = []
+visible_wave_length_intensity = []
 
 
 # red
@@ -31,7 +32,7 @@ fun_y = []
 fun_z = []
 
 for i in range(len(visible_wave_length_intensity_all)):
-    if visible_wave_length_intensity_all[i] > 6000
+    if visible_wave_length_intensity_all[i] > 6000:
         visible_wave_length_intensity.append(visible_wave_length_intensity_all[i])
     else:
         visible_wave_length_intensity.append(0)

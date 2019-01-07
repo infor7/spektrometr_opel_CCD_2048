@@ -5,8 +5,8 @@ class DataFeeder:
     def __init__(self):
         serial_input = serial.Serial('/dev/ttyUSB0', 115200)
         serial_input.write(b'T')
-        serial_input.write((100).to_bytes(3, byteorder='big'))
         serial_input.write((10).to_bytes(3, byteorder='big'))
+        serial_input.write((100).to_bytes(3, byteorder='big'))
         serial_input.write(b'R')
         self.data = serial_input.read(4096)
 
